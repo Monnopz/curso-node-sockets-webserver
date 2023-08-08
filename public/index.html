@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <title>Socket Client</title>
+</head>
+<body class="container">
+    <h1 class="mt-2">Socket Client</h1>
+    <hr>
+
+    <p>
+        Server Status:
+        <span id="lblOnline" class="text-success">Online</span>
+        <span id="lblOffline" class="text-danger">Offline</span>
+    </p>
+
+    <div class="row">
+        <div class="col">
+            <input type="text" id="txtMensaje" class="form-control">
+        </div>
+        <div class="col">
+            <button id="btnEnviar" class="btn btn-primary">
+                Enviar
+            </button>
+        </div>
+    </div>
+
+    <!-- Este archivo lo crea el servidor, por lo que no se encontrará realmente en el path -->
+    <!-- Se pone la ruta relativa ya que ya estamos en el servidor -->
+    <!-- http://localhost:8080/socket.io/socket.io.js -->
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./js/socket-client.js"></script>
+</body>
+</html>
